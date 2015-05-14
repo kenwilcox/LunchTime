@@ -21,9 +21,9 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     // Dispose of any resources that can be recreated.
   }
   
-  func widgetMarginInsetsForProposedMarginInsets(defaultMarginInsets: UIEdgeInsets) -> UIEdgeInsets {
-    return UIEdgeInsetsMake(8.0, 16.0, 8.0, 16.0)
-  }
+//  func widgetMarginInsetsForProposedMarginInsets(defaultMarginInsets: UIEdgeInsets) -> UIEdgeInsets {
+//    return UIEdgeInsetsMake(8.0, 2.0, 8.0, 0.0)
+//  }
   
   func widgetPerformUpdateWithCompletionHandler(completionHandler: ((NCUpdateResult) -> Void)!) {
     // Perform any setup necessary in order to update the view.

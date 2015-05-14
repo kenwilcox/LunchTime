@@ -7,32 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE2373F91B04670C00D00A4E /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE7EBA851B045682007D215B /* NotificationCenter.framework */; };
+		BE2373FE1B04670C00D00A4E /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2373FD1B04670C00D00A4E /* TodayViewController.swift */; };
+		BE2374001B04670C00D00A4E /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE2373FF1B04670C00D00A4E /* MainInterface.storyboard */; };
+		BE2374031B04670C00D00A4E /* TodayExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = BE2373F81B04670C00D00A4E /* TodayExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		BE7EBA5C1B045514007D215B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7EBA5B1B045514007D215B /* AppDelegate.swift */; };
 		BE7EBA5E1B045514007D215B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7EBA5D1B045514007D215B /* ViewController.swift */; };
 		BE7EBA611B045514007D215B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE7EBA5F1B045514007D215B /* Main.storyboard */; };
 		BE7EBA631B045514007D215B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE7EBA621B045514007D215B /* Images.xcassets */; };
 		BE7EBA661B045514007D215B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE7EBA641B045514007D215B /* LaunchScreen.xib */; };
 		BE7EBA721B045514007D215B /* LunchTimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7EBA711B045514007D215B /* LunchTimeTests.swift */; };
-		BE7EBA861B045682007D215B /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE7EBA851B045682007D215B /* NotificationCenter.framework */; };
-		BE7EBA8B1B045682007D215B /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7EBA8A1B045682007D215B /* TodayViewController.swift */; };
-		BE7EBA8D1B045682007D215B /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE7EBA8C1B045682007D215B /* MainInterface.storyboard */; };
-		BE7EBA911B045682007D215B /* LunchTimeNotification.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = BE7EBA831B045682007D215B /* LunchTimeNotification.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		BE2374011B04670C00D00A4E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE7EBA4E1B045514007D215B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BE2373F71B04670C00D00A4E;
+			remoteInfo = TodayExtension;
+		};
 		BE7EBA6C1B045514007D215B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BE7EBA4E1B045514007D215B /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = BE7EBA551B045514007D215B;
 			remoteInfo = LunchTime;
-		};
-		BE7EBA8E1B045682007D215B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BE7EBA4E1B045514007D215B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BE7EBA821B045682007D215B;
-			remoteInfo = LunchTimeNotification;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -43,7 +43,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				BE7EBA911B045682007D215B /* LunchTimeNotification.appex in Embed App Extensions */,
+				BE2374031B04670C00D00A4E /* TodayExtension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -51,6 +51,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BE2373F81B04670C00D00A4E /* TodayExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TodayExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE2373FC1B04670C00D00A4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE2373FD1B04670C00D00A4E /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		BE2373FF1B04670C00D00A4E /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
 		BE7EBA561B045514007D215B /* LunchTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LunchTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE7EBA5A1B045514007D215B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE7EBA5B1B045514007D215B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -63,14 +67,18 @@
 		BE7EBA711B045514007D215B /* LunchTimeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchTimeTests.swift; sourceTree = "<group>"; };
 		BE7EBA7B1B045660007D215B /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		BE7EBA7C1B045660007D215B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		BE7EBA831B045682007D215B /* LunchTimeNotification.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = LunchTimeNotification.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE7EBA851B045682007D215B /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
-		BE7EBA891B045682007D215B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BE7EBA8A1B045682007D215B /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
-		BE7EBA8C1B045682007D215B /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		BE2373F51B04670C00D00A4E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE2373F91B04670C00D00A4E /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BE7EBA531B045514007D215B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -85,17 +93,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BE7EBA801B045682007D215B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BE7EBA861B045682007D215B /* NotificationCenter.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BE2373FA1B04670C00D00A4E /* TodayExtension */ = {
+			isa = PBXGroup;
+			children = (
+				BE2373FD1B04670C00D00A4E /* TodayViewController.swift */,
+				BE2373FF1B04670C00D00A4E /* MainInterface.storyboard */,
+				BE2373FB1B04670C00D00A4E /* Supporting Files */,
+			);
+			path = TodayExtension;
+			sourceTree = "<group>";
+		};
+		BE2373FB1B04670C00D00A4E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BE2373FC1B04670C00D00A4E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		BE7EBA4D1B045514007D215B = {
 			isa = PBXGroup;
 			children = (
@@ -103,7 +121,7 @@
 				BE7EBA7C1B045660007D215B /* README.md */,
 				BE7EBA581B045514007D215B /* LunchTime */,
 				BE7EBA6E1B045514007D215B /* LunchTimeTests */,
-				BE7EBA871B045682007D215B /* LunchTimeNotification */,
+				BE2373FA1B04670C00D00A4E /* TodayExtension */,
 				BE7EBA841B045682007D215B /* Frameworks */,
 				BE7EBA571B045514007D215B /* Products */,
 			);
@@ -114,7 +132,7 @@
 			children = (
 				BE7EBA561B045514007D215B /* LunchTime.app */,
 				BE7EBA6B1B045514007D215B /* LunchTimeTests.xctest */,
-				BE7EBA831B045682007D215B /* LunchTimeNotification.appex */,
+				BE2373F81B04670C00D00A4E /* TodayExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -165,27 +183,26 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		BE7EBA871B045682007D215B /* LunchTimeNotification */ = {
-			isa = PBXGroup;
-			children = (
-				BE7EBA8A1B045682007D215B /* TodayViewController.swift */,
-				BE7EBA8C1B045682007D215B /* MainInterface.storyboard */,
-				BE7EBA881B045682007D215B /* Supporting Files */,
-			);
-			path = LunchTimeNotification;
-			sourceTree = "<group>";
-		};
-		BE7EBA881B045682007D215B /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				BE7EBA891B045682007D215B /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		BE2373F71B04670C00D00A4E /* TodayExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE2374041B04670C00D00A4E /* Build configuration list for PBXNativeTarget "TodayExtension" */;
+			buildPhases = (
+				BE2373F41B04670C00D00A4E /* Sources */,
+				BE2373F51B04670C00D00A4E /* Frameworks */,
+				BE2373F61B04670C00D00A4E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TodayExtension;
+			productName = TodayExtension;
+			productReference = BE2373F81B04670C00D00A4E /* TodayExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		BE7EBA551B045514007D215B /* LunchTime */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BE7EBA751B045514007D215B /* Build configuration list for PBXNativeTarget "LunchTime" */;
@@ -198,7 +215,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				BE7EBA8F1B045682007D215B /* PBXTargetDependency */,
+				BE2374021B04670C00D00A4E /* PBXTargetDependency */,
 			);
 			name = LunchTime;
 			productName = LunchTime;
@@ -223,23 +240,6 @@
 			productReference = BE7EBA6B1B045514007D215B /* LunchTimeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		BE7EBA821B045682007D215B /* LunchTimeNotification */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BE7EBA921B045682007D215B /* Build configuration list for PBXNativeTarget "LunchTimeNotification" */;
-			buildPhases = (
-				BE7EBA7F1B045682007D215B /* Sources */,
-				BE7EBA801B045682007D215B /* Frameworks */,
-				BE7EBA811B045682007D215B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = LunchTimeNotification;
-			productName = LunchTimeNotification;
-			productReference = BE7EBA831B045682007D215B /* LunchTimeNotification.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -249,15 +249,15 @@
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Kenneth Wilcox";
 				TargetAttributes = {
+					BE2373F71B04670C00D00A4E = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
 					BE7EBA551B045514007D215B = {
 						CreatedOnToolsVersion = 6.3.1;
 					};
 					BE7EBA6A1B045514007D215B = {
 						CreatedOnToolsVersion = 6.3.1;
 						TestTargetID = BE7EBA551B045514007D215B;
-					};
-					BE7EBA821B045682007D215B = {
-						CreatedOnToolsVersion = 6.3.1;
 					};
 				};
 			};
@@ -276,12 +276,20 @@
 			targets = (
 				BE7EBA551B045514007D215B /* LunchTime */,
 				BE7EBA6A1B045514007D215B /* LunchTimeTests */,
-				BE7EBA821B045682007D215B /* LunchTimeNotification */,
+				BE2373F71B04670C00D00A4E /* TodayExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		BE2373F61B04670C00D00A4E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE2374001B04670C00D00A4E /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BE7EBA541B045514007D215B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -299,17 +307,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BE7EBA811B045682007D215B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BE7EBA8D1B045682007D215B /* MainInterface.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		BE2373F41B04670C00D00A4E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE2373FE1B04670C00D00A4E /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BE7EBA521B045514007D215B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -327,26 +335,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BE7EBA7F1B045682007D215B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BE7EBA8B1B045682007D215B /* TodayViewController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		BE2374021B04670C00D00A4E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BE2373F71B04670C00D00A4E /* TodayExtension */;
+			targetProxy = BE2374011B04670C00D00A4E /* PBXContainerItemProxy */;
+		};
 		BE7EBA6D1B045514007D215B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = BE7EBA551B045514007D215B /* LunchTime */;
 			targetProxy = BE7EBA6C1B045514007D215B /* PBXContainerItemProxy */;
-		};
-		BE7EBA8F1B045682007D215B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BE7EBA821B045682007D215B /* LunchTimeNotification */;
-			targetProxy = BE7EBA8E1B045682007D215B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -370,6 +370,30 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		BE2374051B04670C00D00A4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TodayExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		BE2374061B04670C00D00A4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TodayExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		BE7EBA731B045514007D215B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -507,33 +531,17 @@
 			};
 			name = Release;
 		};
-		BE7EBA931B045682007D215B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = LunchTimeNotification/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		BE7EBA941B045682007D215B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = LunchTimeNotification/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		BE2374041B04670C00D00A4E /* Build configuration list for PBXNativeTarget "TodayExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE2374051B04670C00D00A4E /* Debug */,
+				BE2374061B04670C00D00A4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		BE7EBA511B045514007D215B /* Build configuration list for PBXProject "LunchTime" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -550,6 +558,7 @@
 				BE7EBA771B045514007D215B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BE7EBA781B045514007D215B /* Build configuration list for PBXNativeTarget "LunchTimeTests" */ = {
 			isa = XCConfigurationList;
@@ -558,14 +567,7 @@
 				BE7EBA7A1B045514007D215B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		BE7EBA921B045682007D215B /* Build configuration list for PBXNativeTarget "LunchTimeNotification" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BE7EBA931B045682007D215B /* Debug */,
-				BE7EBA941B045682007D215B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
