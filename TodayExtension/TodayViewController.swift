@@ -8,6 +8,7 @@
 
 import UIKit
 import NotificationCenter
+import LunchTimeShare
 
 class TodayViewController: UIViewController, NCWidgetProviding {
   
@@ -41,4 +42,8 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     completionHandler(NCUpdateResult.NewData)
   }
 
+  @IBAction func startDayButtonPressed(sender: UIButton) {
+    println("posting notification")
+    NSNotificationCenter.defaultCenter().postNotificationName("START_DAY", object: nil)
+  }
 }
