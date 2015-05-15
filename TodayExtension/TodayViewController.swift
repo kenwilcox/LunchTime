@@ -21,9 +21,15 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     // Dispose of any resources that can be recreated.
   }
   
-  func widgetMarginInsetsForProposedMarginInsets(defaultMarginInsets: UIEdgeInsets) -> UIEdgeInsets {
-    return UIEdgeInsetsMake(8.0, 2.0, 8.0, 0.0)
-  }
+//  func widgetMarginInsetsForProposedMarginInsets(defaultMarginInsets: UIEdgeInsets) -> UIEdgeInsets {
+//    println(defaultMarginInsets)
+//    // iPhone 4s top = 0, left = 48, bottom = 39, right = 0
+//    // iPad Air  top = 0, left = 57, bottom = 39, right = 0
+//    return UIEdgeInsetsMake(8.0, 2.0, 8.0, 0.0)
+////    var insets = defaultMarginInsets
+////    insets.left = 0.0
+////    return insets
+//  }
   
   func widgetPerformUpdateWithCompletionHandler(completionHandler: ((NCUpdateResult) -> Void)!) {
     // Perform any setup necessary in order to update the view.
