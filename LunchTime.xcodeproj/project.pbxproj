@@ -23,6 +23,7 @@
 		BE7EBA631B045514007D215B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE7EBA621B045514007D215B /* Images.xcassets */; };
 		BE7EBA661B045514007D215B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE7EBA641B045514007D215B /* LaunchScreen.xib */; };
 		BE7EBA721B045514007D215B /* LunchTimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7EBA711B045514007D215B /* LunchTimeTests.swift */; };
+		BE972C991B093E8A00639A76 /* LunchTime.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = BE972C981B093E8A00639A76 /* LunchTime.xcdatamodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +114,7 @@
 		BE7EBA7B1B045660007D215B /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		BE7EBA7C1B045660007D215B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BE7EBA851B045682007D215B /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		BE972C981B093E8A00639A76 /* LunchTime.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LunchTime.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,6 +247,7 @@
 				BE7EBA5F1B045514007D215B /* Main.storyboard */,
 				BE7EBA621B045514007D215B /* Images.xcassets */,
 				BE7EBA641B045514007D215B /* LaunchScreen.xib */,
+				BE972C981B093E8A00639A76 /* LunchTime.xcdatamodel */,
 				BE7EBA591B045514007D215B /* Supporting Files */,
 			);
 			path = LunchTime;
@@ -511,6 +514,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE972C991B093E8A00639A76 /* LunchTime.xcdatamodel in Sources */,
 				BE7EBA5E1B045514007D215B /* ViewController.swift in Sources */,
 				BE7EBA5C1B045514007D215B /* AppDelegate.swift in Sources */,
 			);
@@ -829,6 +833,7 @@
 				BE6E697B1B0630A400ADF505 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BE6E69801B0630A400ADF505 /* Build configuration list for PBXNativeTarget "LunchTimeShareTests" */ = {
 			isa = XCConfigurationList;
@@ -837,6 +842,7 @@
 				BE6E697D1B0630A400ADF505 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BE7EBA511B045514007D215B /* Build configuration list for PBXProject "LunchTime" */ = {
 			isa = XCConfigurationList;
