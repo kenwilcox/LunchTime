@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7549" systemVersion="14D136" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Settings" syncable="YES">
+        <attribute name="hoursUntilLunch" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="lunchTimeMinutes" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="WorkDay" syncable="YES">
+        <attribute name="endTime" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="lunchTimeEnd" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="lunchTimeStart" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="snoozeCount" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="startTime" optional="YES" attributeType="Date" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="WorkDay" positionX="-45" positionY="0" width="128" height="120"/>
+        <element name="Settings" positionX="-18" positionY="63" width="128" height="75"/>
+    </elements>
+</model>

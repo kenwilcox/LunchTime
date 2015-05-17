@@ -21,6 +21,9 @@ class ViewController: UIViewController {
 //      var date = obj as! NSDate
 //      println(date)
 //    }
+    
+    var workDayItems = LunchTimeHelper.sharedInstance.getWorkDayItems()
+    println(workDayItems.count)
   }
   
   override func didReceiveMemoryWarning() {
