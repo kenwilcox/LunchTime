@@ -39,4 +39,16 @@ public class LunchTimeHelper: NSObject {
     
     return results!
   }
+  
+  public func insertNewWorkDay(startTime: NSDate) {
+    let context = CoreDataManager.sharedInstance.managedObjectContext
+    let entityDescription = NSEntityDescription.entityForName("WorkDay", inManagedObjectContext: context!)
+    let work = WorkDay(entity: entityDescription!, insertIntoManagedObjectContext: context!)
+    
+    work.startTime = startTime
+    work.lunchTimeStart = startTime.dateByAddingTimeInterval(5 * 60)
+    work.lunchTimeEnd = work.lunchTimeStart.dateByAddingTimeInterval(30)
+    
+    CoreDataManager.sharedInstance.saveContext()
+  }
 }

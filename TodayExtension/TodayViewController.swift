@@ -44,6 +44,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
 
   @IBAction func startDayButtonPressed(sender: UIButton) {
     println("posting notification")
+    LunchTimeHelper.sharedInstance.insertNewWorkDay(NSDate())
     NSNotificationCenter.defaultCenter().postNotificationName("START_DAY", object: nil)
   }
 }
