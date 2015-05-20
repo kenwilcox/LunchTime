@@ -10,9 +10,9 @@ import Foundation
 import CoreData
 
 @objc(Settings)
-class Settings: NSManagedObject {
+public class Settings: NSManagedObject {
   
-  @NSManaged var lunchTimeMinutes: NSNumber
-  @NSManaged var hoursUntilLunch: NSNumber
+  @NSManaged public var lunchTimeMinutes: NSNumber
+  @NSManaged public var hoursUntilLunch: NSNumber
   
 }

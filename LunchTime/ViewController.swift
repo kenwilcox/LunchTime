@@ -8,22 +8,26 @@
 
 import UIKit
 import LunchTimeShare
+import CoreData
 
 class ViewController: UIViewController {
+  
+  @IBOutlet weak var tableView: UITableView!
+  var fetchedResultsController: NSFetchedResultsController!
   
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
     
     NSNotificationCenter.defaultCenter().addObserver(self, selector: "startDay:", name: "START_DAY", object: nil)
-//    var obj: AnyObject? = NSUserDefaults.standardUserDefaults().objectForKey("startDay")
-//    if (obj != nil) {
-//      var date = obj as! NSDate
-//      println(date)
-//    }
     
-    var workDayItems = LunchTimeHelper.sharedInstance.getWorkDayItems()
-    println(workDayItems.count)
+//    var workDayItems = LunchTimeHelper.sharedInstance.getWorkDayItems()
+//    println(workDayItems.count)
+    
+    self.setupFetchedResultsController()
+    
+    self.tableView.dataSource = self
+//    self.tableView.delegate = self
   }
   
   override func didReceiveMemoryWarning() {
@@ -33,6 +37,56 @@ class ViewController: UIViewController {
   
   func startDay(notification: NSNotification) {
     println("startDay")
+  }
+}
+
+// MARK: - UITableViewDataSource
+extension ViewController: UITableViewDataSource
+{
+  func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    return fetchedResultsController.sections!.count
+  }
+  
+  func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    let sectionInfo = self.fetchedResultsController.sections![section] as! NSFetchedResultsSectionInfo
+    return sectionInfo.numberOfObjects
+  }
+  
+  func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    
+    let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
+    let workDay = self.fetchedResultsController.objectAtIndexPath(indexPath) as! WorkDay
+    
+    cell.textLabel!.text = "Start: \(workDay.startTime)"
+    
+    return cell
+  }
+}
+
+// MARK: - FetchedResultsControllerDelegate
+extension ViewController: NSFetchedResultsControllerDelegate
+{
+  func setupFetchedResultsController() {
+    let fetchRequest = NSFetchRequest()
+    let context = CoreDataManager.sharedInstance.managedObjectContext!
+    
+    let entity = NSEntityDescription.entityForName("WorkDay", inManagedObjectContext: context)
+    fetchRequest.entity = entity
+    
+    fetchRequest.sortDescriptors = [NSSortDescriptor(key: "startTime", ascending: false)]
+    
+    self.fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+    
+    self.fetchedResultsController.delegate = self
+    
+    var error: NSError? = nil
+    if !self.fetchedResultsController!.performFetch(&error) {
+      println("An error Occured \(error)")
+    }
+  }
+  
+  func controllerDidChangeContent(controller: NSFetchedResultsController) {
+    self.tableView.reloadData()
   }
 }
 

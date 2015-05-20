@@ -51,4 +51,18 @@ public class LunchTimeHelper: NSObject {
     
     CoreDataManager.sharedInstance.saveContext()
   }
+  
+  public func getWorkDays() -> [AnyObject] {
+    var request = NSFetchRequest()
+    request.entity = NSEntityDescription.entityForName("Work", inManagedObjectContext: CoreDataManager.sharedInstance.managedObjectContext!)
+    request.sortDescriptors = [NSSortDescriptor(key: "startTime", ascending: false)]
+    
+    var error:NSError? = nil
+    var results = CoreDataManager.sharedInstance.managedObjectContext?.executeFetchRequest(request, error: &error)
+    
+    // TODO: actually handle the error
+    println(error?.description)
+    
+    return results!
+  }
 }

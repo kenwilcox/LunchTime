@@ -12,10 +12,10 @@ import CoreData
 @objc(WorkDay)
 public class WorkDay: NSManagedObject {
   
-  @NSManaged var startTime: NSDate
-  @NSManaged var lunchTimeStart: NSDate
-  @NSManaged var lunchTimeEnd: NSDate
-  @NSManaged var endTime: NSDate
-  @NSManaged var snoozeCount: NSNumber
+  @NSManaged public var startTime: NSDate
+  @NSManaged public var lunchTimeStart: NSDate
+  @NSManaged public var lunchTimeEnd: NSDate
+  @NSManaged public var endTime: NSDate
+  @NSManaged public var snoozeCount: NSNumber
   
 }
