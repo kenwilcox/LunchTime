@@ -12,7 +12,7 @@ import CoreData
 public class LunchTimeHelper: NSObject {
   
   private override init() {
-    
+
   }
   
   public class var sharedInstance : LunchTimeHelper {
@@ -48,6 +48,13 @@ public class LunchTimeHelper: NSObject {
     work.startTime = startTime
     work.lunchTimeStart = startTime.dateByAddingTimeInterval(5 * 60)
     work.lunchTimeEnd = work.lunchTimeStart.dateByAddingTimeInterval(30)
+    
+    var notification = UILocalNotification()
+    notification.alertBody = "It's time to take a lunch"
+    notification.fireDate = work.startTime.dateByAddingTimeInterval(10)
+    //notification.soundName = UILocalNotificationDefaultSoundName
+    notification.category = "LUNCHTIME_CATEGORY"
+    UIApplication.sharedApplication().scheduleLocalNotification(notification)
     
     CoreDataManager.sharedInstance.saveContext()
   }
