@@ -20,6 +20,9 @@ class ViewController: UIViewController {
     // Do any additional setup after loading the view, typically from a nib.
     
     NSNotificationCenter.defaultCenter().addObserver(self, selector: "startDay:", name: "START_DAY", object: nil)
+    NSNotificationCenter.defaultCenter().addObserverForName(nil, object: nil, queue: nil) { (notification:NSNotification!) -> Void in
+      println("\(notification.name)")
+    }
     
 //    var workDayItems = LunchTimeHelper.sharedInstance.getWorkDayItems()
 //    println(workDayItems.count)
